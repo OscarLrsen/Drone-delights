@@ -33,6 +33,31 @@ export default function Home() {
         </div>
       </section>
 
+            <section className="section">
+        <h2>Popular Meals</h2>
+        <div className="meals-grid">
+          <div className="meal-card">
+            <img src="https://via.placeholder.com/300" alt="Grilled Chicken Salad" />
+            <h3>Grilled Chicken Salad</h3>
+            <p>129 SEK</p>
+            <p>Add to Cart</p>
+          </div>
+          <div className="meal-card">
+            <img src="https://via.placeholder.com/300" alt="Salmon Bowl" />
+            <h3>Salmon Bowl</h3>
+            <p>149 SEK</p>
+            <p>Add to Cart</p>
+          </div>
+          <div className="meal-card">
+            <img src="https://via.placeholder.com/300" alt="Quinoa Wrap" />
+            <h3>Quinoa Wrap</h3>
+            <p>109 SEK</p>
+            <p>Add to Cart</p>
+          </div>
+        </div>
+      </section>
+
+
 
 
 

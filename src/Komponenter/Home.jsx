@@ -1,18 +1,26 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Home.css";
 import chickenImg from "./Bilder/grilled-chicken.png";
 import salmonImg from "./Bilder/salmon.png";
 import quinoaImg from "./Bilder/quinoa.png";
-
-
+import ShrimpImg from "./Bilder/Shrimp-Stir-Fry.png";
+import TurkeyWrapImg from "./Bilder/Turkey-Wrap.png";
+import ChiaPudImg from "./Bilder/ChiaPud.png";
+import electrolyteImg from "./Bilder/electrolyte.png";
+import fruitSaladImg from "./Bilder/Fruit-Salad.png";
 
 
 const meals = [
-  { id: 1, name: "Grilled Chicken Salad", price: 129, image: chickenImg },
-  { id: 2, name: "Salmon with Roasted Vegetables", price: 149, image: salmonImg },
-  { id: 3, name: "Quinoa Bowl", price: 109, image: quinoaImg },
-  { id: 4, name: "Turkey & Spinach Wrap", price: 115, image: wrapImg },
-  { id: 5, name: "Lentil Soup", price: 99, image: soupImg }
+  { id: 1, name: "Grilled Chicken Salad", price: 129, image: chickenImg, type: "post-workout" },
+  { id: 2, name: "Salmon with Roasted Vegetables", price: 149, image: salmonImg, type: "post-workout" },
+  { id: 3, name: "Quinoa Bowl", price: 109, image: quinoaImg,  type: "post-workout"},
+  { id: 4, name: "Shrimp Stir Fry", price: 140, image: ShrimpImg, type: "post-workout" },
+  { id: 5, name: "Turkey Wrap", price: 99, image: TurkeyWrapImg, type: "post-workout" },
+  { id: 6, name: "Fruit salad", price: 80, image: fruitSaladImg, type: "pre-workout" },
+  { id: 7, name: "Electrolyte", price: 40, image: electrolyteImg, type: "pre-workout" },
+  { id: 8, name: "Chia Pudding", price: 109, image: ChiaPudImg, type: "pre-workout" }
+
 ];
 
 

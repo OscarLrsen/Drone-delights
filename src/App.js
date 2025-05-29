@@ -6,7 +6,6 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* Andra sidor kommer senare */}
       </Routes>
     </Router>
   );

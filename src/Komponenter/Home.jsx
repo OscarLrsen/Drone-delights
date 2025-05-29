@@ -1,5 +1,23 @@
 import React from "react";
-import "./Home.css"; // skapa denna fil
+import "./Home.css";
+import chickenImg from "./Bilder/grilled-chicken.png";
+import salmonImg from "./Bilder/salmon.png";
+import quinoaImg from "./Bilder/quinoa.png";
+
+
+
+
+const meals = [
+  { id: 1, name: "Grilled Chicken Salad", price: 129, image: chickenImg },
+  { id: 2, name: "Salmon with Roasted Vegetables", price: 149, image: salmonImg },
+  { id: 3, name: "Quinoa Bowl", price: 109, image: quinoaImg },
+  { id: 4, name: "Turkey & Spinach Wrap", price: 115, image: wrapImg },
+  { id: 5, name: "Lentil Soup", price: 99, image: soupImg }
+];
+
+
+
+
 
 export default function Home() {
   return (
@@ -20,56 +38,6 @@ export default function Home() {
           <button className="btn btn-light">🛒</button>
         </div>
       </header>
-
-      <section className="hero">
-        <h1>Drone Delivery: Food at Your Doorstep</h1>
-        <p>
-          Experience the future of food delivery with our fast, efficient, and
-          eco-friendly drone service.
-        </p>
-        <div className="hero-buttons">
-          <button className="btn btn-yellow">Custom Meal</button>
-          <button className="btn btn-light">Recommended</button>
-        </div>
-      </section>
-
-            <section className="section">
-        <h2>Popular Meals</h2>
-        <div className="meals-grid">
-          <div className="meal-card">
-            <img src="https://via.placeholder.com/300" alt="Grilled Chicken Salad" />
-            <h3>Grilled Chicken Salad</h3>
-            <p>129 SEK</p>
-            <p>Add to Cart</p>
-          </div>
-          <div className="meal-card">
-            <img src="https://via.placeholder.com/300" alt="Salmon Bowl" />
-            <h3>Salmon Bowl</h3>
-            <p>149 SEK</p>
-            <p>Add to Cart</p>
-          </div>
-          <div className="meal-card">
-            <img src="https://via.placeholder.com/300" alt="Quinoa Wrap" />
-            <h3>Quinoa Wrap</h3>
-            <p>109 SEK</p>
-            <p>Add to Cart</p>
-          </div>
-        </div>
-      </section>
-
-         <section className="section">
-        <h2>How the Delivery Works</h2>
-        <div className="how-it-works">
-          <div><strong>1.</strong> Order through our website</div>
-          <div><strong>2.</strong> Food is dispatched by drone</div>
-          <div><strong>3.</strong> Delivered to your front door</div>
-        </div>
-      </section>
-
-
-
-
-
 
     </>
   );

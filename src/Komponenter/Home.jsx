@@ -25,6 +25,7 @@ const meals = [
 
 
 
+const popularMeals = meals.slice(0, 6);
 
 
 export default function Home() {
@@ -46,6 +47,22 @@ export default function Home() {
           <button className="btn btn-light">🛒</button>
         </div>
       </header>
+      
+
+<section className="PopularMealssection">
+  <h2>Popular Meals</h2>
+  <div className="meals-grid">
+    {popularMeals.map((meal) => (
+      <div className="meal-card" key={meal.id}>
+        <img src={meal.image} alt={meal.name} />
+        <h3>{meal.name}</h3>
+        <p>{meal.price} SEK</p>
+        <p>Add to Cart</p>
+      </div>
+    ))}
+  </div>
+</section>
+
 
     </>
   );

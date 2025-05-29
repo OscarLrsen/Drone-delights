@@ -57,6 +57,15 @@ export default function Home() {
         </div>
       </section>
 
+         <section className="section">
+        <h2>How the Delivery Works</h2>
+        <div className="how-it-works">
+          <div><strong>1.</strong> Order through our website</div>
+          <div><strong>2.</strong> Food is dispatched by drone</div>
+          <div><strong>3.</strong> Delivered to your front door</div>
+        </div>
+      </section>
+
 
 
 

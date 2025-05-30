@@ -5,6 +5,14 @@ body {
   color: #1b160e;
 }
 
+.topLogo {
+  color: #D29628;
+  font-size: 60px;
+  font-weight: bold;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  letter-spacing: 1px;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -21,6 +29,12 @@ header {
   cursor: pointer;
   margin: 0 20px;
 }
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 16px; 
+}
+
 
 
 .logo { 
@@ -145,8 +159,8 @@ nav a {
 }
 
 .hero h1 {
-  font-size: 36px;
-  font-weight: 900;
+  font-size: 54px;
+  font-weight: 540;
   margin-bottom: 10px;
 }
 
@@ -161,6 +175,12 @@ nav a {
 
 .section {
   padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.PopularMealssection {
+  padding: 0 30px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -273,9 +293,18 @@ footer {
   margin-top: 60px;
 }
 
-footer a {
-  color: #957e50;
+.btm-nav-link {
+  margin: 0 80px;
+  font-size: 34px;
+  font-weight: 500;
+  color: #947D4F;
   text-decoration: none;
-  margin: 0 10px;
-  font-size: 14px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+
+
+.btm-nav-link:hover {
+  color: #df9f1f;
 }

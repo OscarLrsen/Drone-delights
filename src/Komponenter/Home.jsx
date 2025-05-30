@@ -32,28 +32,26 @@ const meals = [
 
 
 
-const popularMeals = meals.slice(0, 6);
+const popularMeals = meals.slice(0, 8);
 
 
 export default function Home() {
   return (
     <>
-      <header>
-        <div className="logo">
-          <svg width="24" height="24" viewBox="0 0 48 48" fill="currentColor">
-          </svg>
-          NUTRI
-        </div>
-        <div>
-            <nav>
-                <span className="nav-link">Our Menu</span>
-                <span className="nav-link">About Us</span>
-                <span className="nav-link">Contact Us</span>
-            </nav>
-            <button className="btn btn-yellow">Find Us</button>
-            <button className="btn btn-light">🛒</button>
-        </div>
-      </header>
+    <header>
+    <div className="topLogo">NUTRI</div>
+
+    <div className="nav-buttons">
+        <nav>
+        <span className="nav-link">Our Menu</span>
+        <span className="nav-link">About Us</span>
+        <span className="nav-link">Contact Us</span>
+        </nav>
+        <button className="btn btn-yellow">Find Us</button>
+        <button className="btn btn-light">🛒</button>
+    </div>
+    </header>
+
       
 
 
@@ -78,7 +76,7 @@ export default function Home() {
             <img src={meal.image} alt={meal.name} />
             <h3>{meal.name}</h3>
             <p>{meal.price} SEK</p>
-            <p>Add to Cart</p>
+            <button className="btn btn-add">Add to Cart</button>
         </div>
         ))}
     </div>
@@ -132,12 +130,12 @@ export default function Home() {
 
     <footer>
         <div>
-            <span className="nav-link">Our Menu</span>
-            <span className="nav-link">About Us</span>
-            <span className="nav-link">Contact Us</span>
+            <span className="btm-nav-link">Our Menu</span>
+            <span className="btm-nav-link">About Us</span>
+            <span className="btm-nav-link">Contact Us</span>
         </div>
 
-        <p style={{ marginTop: "10px", color: "#957e50", fontSize: "14px" }}>
+        <p style={{ marginTop: "20px", color: "#947D4F", fontSize: "18px" }}>
           © 2025 NUTRI. All rights reserved.
         </p>
     </footer>

@@ -44,17 +44,31 @@ export default function Home() {
           </svg>
           NUTRI
         </div>
-        <nav>
-            <span className="nav-link">Our Menu</span>
-            <span className="nav-link">About Us</span>
-            <span className="nav-link">Contact Us</span>
-        </nav>
         <div>
-          <button className="btn btn-yellow">Find Us</button>
-          <button className="btn btn-light">🛒</button>
+            <nav>
+                <span className="nav-link">Our Menu</span>
+                <span className="nav-link">About Us</span>
+                <span className="nav-link">Contact Us</span>
+            </nav>
+            <button className="btn btn-yellow">Find Us</button>
+            <button className="btn btn-light">🛒</button>
         </div>
       </header>
       
+
+
+
+    <section className="hero">
+        <div className="hero-text">
+            <h1>FOOD DELIVERED<br />WITH PURPOSE.</h1>
+            <div className="hero-buttons">
+            <button className="btn-outline">Post Workout</button>
+            <button className="btn-outline">Pre Workout</button>
+            <button className="btn-outline">Menu</button>
+            </div>
+        </div>
+    </section>
+
 
     <section className="PopularMealssection">
     <h2>Popular Meals</h2>

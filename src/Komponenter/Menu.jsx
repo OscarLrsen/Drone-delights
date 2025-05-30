@@ -1,5 +1,5 @@
 import React from "react";
-import "./Menu.css";
+import "./Home.css";
 
 // Import för matbilder
 import chickenImg from "./Bilder/grilled-chicken.png";
@@ -8,31 +8,49 @@ import quinoaImg from "./Bilder/quinoa.png";
 import ShrimpImg from "./Bilder/Shrimp-Stir-Fry.png";
 import TurkeyWrapImg from "./Bilder/Turkey-Wrap.png";
 import ChiaPudImg from "./Bilder/ChiaPud.png";
-import electrolyteImg from "./Bilder/electrolyte.png";
 import fruitSaladImg from "./Bilder/Fruit-Salad.png";
 
-//Import för info bilder
-import orderingImg from "./Bilder/Ordering.png";
-import deliveryImg from "./Bilder/Food-Drone.png";
-import DeliveredImg from "./Bilder/Delivered.png";
-import droneChatImg from "./Bilder/droneChat.png";
+// Import för Dryck
+import electrolyteImg from "./Bilder/electrolyte.png";
+import noccoA from "./Bilder/Arancia.png";
+import noccoB from "./Bilder/Berruba.png";
+import noccoC from "./Bilder/Careibbean.png";
+import energySmoothie from "./Bilder/energy-smoothie.png";
+import greenSmoothie from "./Bilder/GreenSmoothie.png";
+
+// 
+
+
 
 
 const meals = [
+    //Post-workout
   { id: 1, name: "Grilled Chicken Salad", price: 129, image: chickenImg, type: "post-workout" },
   { id: 2, name: "Salmon with Roasted Vegetables", price: 149, image: salmonImg, type: "post-workout" },
   { id: 3, name: "Quinoa Bowl", price: 109, image: quinoaImg,  type: "post-workout"},
   { id: 4, name: "Shrimp Stir Fry", price: 140, image: ShrimpImg, type: "post-workout" },
   { id: 5, name: "Turkey Wrap", price: 99, image: TurkeyWrapImg, type: "post-workout" },
+  
+
+    //Pre-workout meals
   { id: 6, name: "Fruit salad", price: 80, image: fruitSaladImg, type: "pre-workout" },
   { id: 7, name: "Electrolyte", price: 40, image: electrolyteImg, type: "pre-workout" },
-  { id: 8, name: "Chia Pudding", price: 109, image: ChiaPudImg, type: "pre-workout" }
+  { id: 8, name: "Chia Pudding", price: 109, image: ChiaPudImg, type: "pre-workout" }, 
+
+  //Dryck
+  { id: 9, name: "Energy Smoothie", price: 89, image: energySmoothie, type: ["pre-workout", "drink"] },
+  { id: 10, name: "Green Juice", price: 70, image: greenSmoothie, type: ["pre-workout", "drink"] }, 
+  { id: 11, name: "Nocco", price: 30, image: noccoA, type: ["pre-workout", "drink"]},
+  { id: 12, name: "Caribbean", price: 30, image: noccoC, type: ["pre-workout", "drink"]},
+  { id: 12, name: "Berruba", price: 30, image: noccoB, type: ["pre-workout", "drink"]},
+  { id: 13, name: "Arancia", price: 30, image: noccoA, type: ["pre-workout", "drink"]},
+
 
 ];
 
 
 
-const popularMeals = meals.slice(0, 4);
+const popularMeals = meals.slice(0, 12);
 
 
 export default function Home() {
@@ -43,7 +61,7 @@ export default function Home() {
 
     <div className="nav-buttons">
         <nav>
-        <span className="nav-link">Our Menu</span>
+        <span className="nav-link">Home</span>
         <span className="nav-link">About Us</span>
         <span className="nav-link">Contact Us</span>
         </nav>
@@ -58,9 +76,13 @@ export default function Home() {
 
     <section className="hero">
         <div className="hero-text">
-            <h1>FOOD DELIVERED<br />WITH PURPOSE.</h1>
+            <h1>Our Menu</h1>
             <div className="hero-buttons">
-            <button className="btn-outline">See our Menu</button>
+            <button className="btn-outline">Post Workout</button>
+            <button className="btn-outline">Pre Workout</button>
+            <button className="btn-outline">Drinks</button>
+            <button className="btn-outline">All Choices</button>
+
             </div>
         </div>
     </section>
@@ -80,47 +102,6 @@ export default function Home() {
     </div>
     </section>
 
-    <section className="InfoSection">
-    <h2>How the Delivery Works</h2>
-    <div className="info-content">
-
-        <div className="steps-column">
-
-        <div className="step-item">
-            <div className="step-icon">
-            <img src={orderingImg} alt="Step 1" />
-            </div>
-            <div className="step-text">
-            <p><strong>1.</strong> Order through our website</p>
-            </div>
-        </div>
-
-        <div className="step-item">
-            <div className="step-icon">
-            <img src={deliveryImg} alt="Step 2" />
-            </div>
-            <div className="step-text">
-            <p><strong>2.</strong> Food is dispatched by drone</p>
-            </div>
-        </div>
-
-        <div className="step-item">
-            <div className="step-icon">
-            <img src={DeliveredImg} alt="Step 3" />
-            </div>
-            <div className="step-text">
-            <p><strong>3.</strong> Delivered to your front door</p>
-            </div>
-        </div>
-
-        </div>
-
-        <div className="info-image">
-        <img src={droneChatImg} alt="Drone delivery process" />
-        </div>
-
-    </div>
-    </section>
 
 
 

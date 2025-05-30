@@ -81,7 +81,6 @@ header {
   color: white;
 }
 
-
 nav a {
   margin: 0 16px;
   text-decoration: none;
@@ -175,71 +174,6 @@ nav a {
     margin: 2px 0;
 
   color: #957e50;
-}
-
-.InfoSection {
-  padding: 60px 40px;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.InfoSection h2 {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 32px;
-}
-
-.info-content {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 60px;
-  flex-wrap: wrap;
-}
-
-.steps-column {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  max-width: 600px;
-  flex: 1;
-}
-
-.step-item {
-  display: flex;
-  align-items: center;
-    gap: 20px;
-}
-
-.step-icon {
-  background-color: #fcebd6;
-  width: 100px !important;
-  height: 100px !important;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.step-icon img {
-  width: 100px !important;
-  height: 100px !important;
-  object-fit: contain;
-}
-
-.step-text p {
-  font-size: 26px;
-  margin: 0;
-  line-height: 1.4;
-  color: #1b160e;
-}
-
-.info-image img {
-  max-width: 500px;
-  width: 200%;
-  border-radius: 12px;
-  object-fit: contain;
 }
 
 

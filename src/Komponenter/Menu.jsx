@@ -1,5 +1,5 @@
 import React from "react";
-import "./Home.css";
+import "./Menu.css";
 
 // Import för matbilder
 import chickenImg from "./Bilder/grilled-chicken.png";

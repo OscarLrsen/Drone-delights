@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./Menu.css";
 import Filter from "./Filter";
+import { useCart } from "../../Kontext/CartContext";
+import Header from "../Layout/Header";
+
+
+
 
 // Importera alla bilder
 import chickenImg from "../Bilder/grilled-chicken.png";
@@ -37,6 +42,8 @@ const imageMap = {
 export default function Menu() {
   const [meals, setMeals] = useState([]);
   const [filter, setFilter] = useState("all");
+  const { addToCart } = useCart();
+
 
 
   useEffect(() => {
@@ -53,18 +60,7 @@ export default function Menu() {
   });
   return (
     <>
-      <header>
-        <div className="topLogo">NUTRI</div>
-        <div className="nav-buttons">
-          <nav>
-            <span className="nav-link">Home</span>
-            <span className="nav-link">About Us</span>
-            <span className="nav-link">Contact Us</span>
-          </nav>
-          <button className="btn btn-yellow">Find Us</button>
-          <button className="btn btn-light">🛒</button>
-        </div>
-      </header>
+        <Header /> 
 
       <section className="hero">
         <div className="hero-text">
@@ -85,7 +81,11 @@ export default function Menu() {
               />
               <h3>{meal.name}</h3>
               <p>{meal.price} SEK</p>
-              <button className="btn btn-yellow">Add to Cart</button>
+              <button
+                className="btn btn-yellow"
+                onClick={() => addToCart({ ...meal, quantity: 1 })}>
+                Add to Cart
+              </button>
             </div>
           ))}
         </div>

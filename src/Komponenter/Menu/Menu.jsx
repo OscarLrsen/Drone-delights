@@ -1,20 +1,21 @@
 import React, { useEffect, useState } from "react";
 import "./Menu.css";
+import Filter from "./Filter";
 
 // Importera alla bilder
-import chickenImg from "./Bilder/grilled-chicken.png";
-import salmonImg from "./Bilder/salmon.png";
-import quinoaImg from "./Bilder/quinoa.png";
-import ShrimpImg from "./Bilder/Shrimp-Stir-Fry.png";
-import TurkeyWrapImg from "./Bilder/Turkey-Wrap.png";
-import fruitSaladImg from "./Bilder/Fruit-Salad.png";
-import electrolyteImg from "./Bilder/electrolyte.png";
-import ChiaPudImg from "./Bilder/ChiaPud.png";
-import energySmoothie from "./Bilder/energy-smoothie.png";
-import greenSmoothie from "./Bilder/green-smoothie.png";
-import noccoA from "./Bilder/Arancia.png";
-import noccoB from "./Bilder/Berruba.png";
-import noccoC from "./Bilder/Careibbean.png";
+import chickenImg from "../Bilder/grilled-chicken.png";
+import salmonImg from "../Bilder/salmon.png";
+import quinoaImg from "../Bilder/quinoa.png";
+import ShrimpImg from "../Bilder/Shrimp-Stir-Fry.png";
+import TurkeyWrapImg from "../Bilder/Turkey-Wrap.png";
+import fruitSaladImg from "../Bilder/Fruit-Salad.png";
+import electrolyteImg from "../Bilder/electrolyte.png";
+import ChiaPudImg from "../Bilder/ChiaPud.png";
+import energySmoothie from "../Bilder/energy-smoothie.png";
+import greenSmoothie from "../Bilder/green-smoothie.png";
+import noccoA from "../Bilder/Arancia.png";
+import noccoB from "../Bilder/Berruba.png";
+import noccoC from "../Bilder/Careibbean.png";
 
 // Koppla bildnamn från databas till importerade bilder
 const imageMap = {
@@ -35,6 +36,8 @@ const imageMap = {
 
 export default function Menu() {
   const [meals, setMeals] = useState([]);
+  const [filter, setFilter] = useState("all");
+
 
   useEffect(() => {
     fetch("http://localhost:3001/products")
@@ -43,8 +46,11 @@ export default function Menu() {
       .catch((err) => console.error("Error fetching meals:", err));
   }, []);
 
-  const popularMeals = [...meals].sort(() => 0.5 - Math.random()).slice(0, 12);
-
+  const filteredMeals = meals.filter((meal) => {
+    if (filter === "all") return true;
+    if (Array.isArray(meal.type)) return meal.type.includes(filter);
+    return meal.type === filter;
+  });
   return (
     <>
       <header>
@@ -63,19 +69,14 @@ export default function Menu() {
       <section className="hero">
         <div className="hero-text">
           <h1>Our Menu</h1>
-          <div className="hero-buttons">
-            <button className="btn-outline">Post Workout</button>
-            <button className="btn-outline">Pre Workout</button>
-            <button className="btn-outline">Drinks</button>
-            <button className="btn-outline">All Choices</button>
-          </div>
+          <Filter currentFilter={filter} setFilter={setFilter} />
         </div>
       </section>
 
       <section className="PopularMealssection">
         <h2>Popular Meals</h2>
         <div className="meals-grid">
-          {popularMeals.map((meal) => (
+          {filteredMeals.map((meal) => (
             <div className="meal-card" key={meal.id}>
               <img
                 src={imageMap[meal.image]}

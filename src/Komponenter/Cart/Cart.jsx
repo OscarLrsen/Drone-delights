@@ -1,15 +1,10 @@
-import React from "react";  
+import React from "react";
 import "./Cart.css";
+import CartItem from "./CartItem";
+import CartTotal from "./CartTotal";
+import PaymentOptions from "./PaymentOptions";
 
-import chickenImg from "./Bilder/grilled-chicken.png";
-import salmonImg from "./Bilder/salmon.png";
-import quinoaImg from "./Bilder/quinoa.png";
 
-const cartItems = [
-  { id: 1, name: "Grilled Chicken Salad", price: 129, image: chickenImg, type: "post-workout" },
-  { id: 2, name: "Salmon with Roasted Vegetables", price: 149, image: salmonImg, type: "post-workout" },
-  { id: 3, name: "Quinoa Bowl", price: 109, image: quinoaImg,  type: "post-workout"},
-];
 export default function Cart() {
   return (
     <>

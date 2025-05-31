@@ -1,45 +1,41 @@
 import React from "react";
+import Header from "../Layout/Header";
+import Footer from "../Layout/Footer";
 import "./Cart.css";
 import CartItem from "./CartItem";
 import CartTotal from "./CartTotal";
-import PaymentOptions from "./PaymentOptions";
-
+import PaymentOptions from "./Payment";
 
 export default function Cart() {
   return (
     <>
-    <header>
-    <div className="topLogo">NUTRI</div>
+      <Header />
 
-    <div className="nav-buttons">
-        <nav>
-        <span className="nav-link">Home</span>
-        <span className="nav-link">About Us</span>
-        <span className="nav-link">Contact Us</span>
-        </nav>
-        <button className="btn btn-yellow">Find Us</button>
-        <button className="btn btn-light">🛒</button>
-    </div>
-    </header>    
+      <main className="cart-container">
+        <h1 className="cart-title">Your Order</h1>
 
-      
+        <section>
+          <h2 className="cart-section-title">Items</h2>
+          <CartItem />
+          <CartItem />
+        </section>
 
+        <section>
+          <h2 className="cart-section-title">Total</h2>
+          <CartTotal />
+        </section>
 
+        <section>
+          <h2 className="cart-section-title">Payment</h2>
+          <PaymentOptions />
+        </section>
 
-
-    <footer>
-        <div>
-            <span className="btm-nav-link">Our Menu</span>
-            <span className="btm-nav-link">About Us</span>
-            <span className="btm-nav-link">Contact Us</span>
+        <div className="cart-button-container">
+          <button className="cart-pay-button">Proceed to Payment</button>
         </div>
+      </main>
 
-        <p style={{ marginTop: "20px", color: "#947D4F", fontSize: "18px" }}>
-          © 2025 NUTRI. All rights reserved.
-        </p>
-    </footer>
-
-
+      <Footer />
     </>
   );
 }

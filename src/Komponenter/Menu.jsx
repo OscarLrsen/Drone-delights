@@ -53,7 +53,7 @@ const meals = [
 const popularMeals = meals.slice(0, 12);
 
 
-export default function Home() {
+export default function Menu() {
   return (
     <>
     <header>

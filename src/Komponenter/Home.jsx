@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./Home.css";
 import { useCart } from "../Kontext/CartContext";
-import CartButton from "./Cart/CartButton";
 import Header from "./Layout/Header";
+import Footer from "./Layout/Footer";
+
 
 // Importera alla bilder
 import chickenImg from "./Bilder/grilled-chicken.png";
@@ -128,16 +129,8 @@ export default function Home() {
         </div>
       </section>
 
-      <footer>
-        <div>
-          <span className="btm-nav-link">Our Menu</span>
-          <span className="btm-nav-link">About Us</span>
-          <span className="btm-nav-link">Contact Us</span>
-        </div>
-        <p style={{ marginTop: "20px", color: "#947D4F", fontSize: "18px" }}>
-          © 2025 NUTRI. All rights reserved.
-        </p>
-      </footer>
+    <Footer />
+
     </>
   );
 }

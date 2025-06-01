@@ -5,8 +5,11 @@ import "./Cart.css";
 import CartItem from "./CartItem";
 import CartTotal from "./CartTotal";
 import PaymentOptions from "./Payment";
+import { useCart } from "../../Kontext/CartContext"; // viktigt!
 
 export default function Cart() {
+  const { cartItems } = useCart(); // hämta riktiga varor
+
   return (
     <>
       <Header />
@@ -16,8 +19,13 @@ export default function Cart() {
 
         <section>
           <h2 className="cart-section-title">Items</h2>
-          <CartItem />
-          <CartItem />
+          {cartItems.length === 0 ? (
+            <p className="empty-cart">Your cart is empty.</p>
+          ) : (
+            cartItems.map((item) => (
+              <CartItem key={item.id} item={item} />
+            ))
+          )}
         </section>
 
         <section>

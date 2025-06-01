@@ -53,12 +53,16 @@ header {
 
 /* FOOTER */
 footer {
-  text-align: center;
-  padding: 40px 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   background: white;
   border-top: 1px solid #e6dfd1;
-  margin-top: 60px;
+  padding: 40px 20px;
+  text-align: center;
+  z-index: 100;
 }
+
 
 .btm-nav-link {
   margin: 0 80px;

@@ -3,45 +3,11 @@ import "./Home.css";
 import { useCart } from "../Kontext/CartContext";
 import Header from "./Layout/Header";
 import Footer from "./Layout/Footer";
+import imageMap from "../imageMap";
 
 
-// Importera alla bilder
-import chickenImg from "./Bilder/grilled-chicken.png";
-import salmonImg from "./Bilder/salmon.png";
-import quinoaImg from "./Bilder/quinoa.png";
-import ShrimpImg from "./Bilder/Shrimp-Stir-Fry.png";
-import TurkeyWrapImg from "./Bilder/Turkey-Wrap.png";
-import fruitSaladImg from "./Bilder/Fruit-Salad.png";
-import electrolyteImg from "./Bilder/electrolyte.png";
-import ChiaPudImg from "./Bilder/ChiaPud.png";
-import energySmoothie from "./Bilder/energy-smoothie.png";
-import greenSmoothie from "./Bilder/green-smoothie.png";
-import noccoA from "./Bilder/Arancia.png";
-import noccoB from "./Bilder/Berruba.png";
-import noccoC from "./Bilder/Careibbean.png";
 
-// Infobilder
-import orderingImg from "./Bilder/Ordering.png";
-import deliveryImg from "./Bilder/Food-Drone.png";
-import DeliveredImg from "./Bilder/Delivered.png";
-import droneChatImg from "./Bilder/droneChat.png";
 
-// Bild-mappning
-const imageMap = {
-  "grilled-chicken.png": chickenImg,
-  "salmon.png": salmonImg,
-  "quinoa.png": quinoaImg,
-  "Shrimp-Stir-Fry.png": ShrimpImg,
-  "Turkey-Wrap.png": TurkeyWrapImg,
-  "Fruit-Salad.png": fruitSaladImg,
-  "electrolyte.png": electrolyteImg,
-  "ChiaPud.png": ChiaPudImg,
-  "energy-smoothie.png": energySmoothie,
-  "green-smoothie.png": greenSmoothie,
-  "Arancia.png": noccoA,
-  "Berruba.png": noccoB,
-  "Careibbean.png": noccoC,
-};
 
 export default function Home() {
   const [meals, setMeals] = useState([]);
@@ -99,7 +65,7 @@ export default function Home() {
           <div className="steps-column">
             <div className="step-item">
               <div className="step-icon">
-                <img src={orderingImg} alt="Step 1" />
+              <img src={imageMap["Ordering.png"]} alt="Step 1" />
               </div>
               <div className="step-text">
                 <p><strong>1.</strong> Order through our website</p>
@@ -107,7 +73,7 @@ export default function Home() {
             </div>
             <div className="step-item">
               <div className="step-icon">
-                <img src={deliveryImg} alt="Step 2" />
+              <img src={imageMap["Food-Drone.png"]} alt="Step 2" />
               </div>
               <div className="step-text">
                 <p><strong>2.</strong> Food is dispatched by drone</p>
@@ -115,7 +81,7 @@ export default function Home() {
             </div>
             <div className="step-item">
               <div className="step-icon">
-                <img src={DeliveredImg} alt="Step 3" />
+              <img src={imageMap["Delivered.png"]} alt="Step 3" />
               </div>
               <div className="step-text">
                 <p><strong>3.</strong> Delivered to your front door</p>
@@ -124,7 +90,7 @@ export default function Home() {
           </div>
 
           <div className="info-image">
-            <img src={droneChatImg} alt="Drone delivery process" />
+          <img src={imageMap["droneChat.png"]} alt="Drone delivery process" />
           </div>
         </div>
       </section>

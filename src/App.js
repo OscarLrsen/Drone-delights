@@ -10,8 +10,6 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/menu" element={<Menu />} /> 
         <Route path="/cart" element={<Cart />} />
-
-
       </Routes>
     </Router>
   );

@@ -28,6 +28,13 @@
   margin-bottom: 16px;
 }
 
+.cart-item-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
 .cart-button-container {
   display: flex;
   justify-content: center;

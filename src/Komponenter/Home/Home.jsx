@@ -7,17 +7,14 @@ import imageMap from "../../imageMap";
 import PopularMeals from "./PopularMeals";
 import { useNavigate } from "react-router-dom";
 import InfoSection from "./InfoSection";
-
-
-
-
-
+import HeroSektion from "./HeroSektion";
 
 
 
 export default function Home() {
   const [meals, setMeals] = useState([]);
   const { addToCart } = useCart();
+  
 
   useEffect(() => {
     fetch("http://localhost:3001/products")
@@ -32,18 +29,11 @@ export default function Home() {
 
   return (
     <>
-      <Header /> 
+    <Header /> 
 
 
-      <section className="hero">
-        <div className="hero-text">
-          <h1>FOOD DELIVERED<br />WITH PURPOSE.</h1>
-          <div className="hero-buttons">
-            <button className="btn-outline" onClick={() => navigate("Menu")}>See our Menu</button> 
+    <HeroSektion />
 
-          </div>
-        </div>
-      </section>
 
     <PopularMeals popularMeals={popularMeals} />
 

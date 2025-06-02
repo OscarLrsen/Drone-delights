@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./Home.css";
-import { useCart } from "../Kontext/CartContext";
-import Header from "./Layout/Header";
-import Footer from "./Layout/Footer";
-import imageMap from "../imageMap";
+import { useCart } from "../../Kontext/CartContext";
+import Header from "../Layout/Header";
+import Footer from "../Layout/Footer";
+import imageMap from "../../imageMap";
 
 
 

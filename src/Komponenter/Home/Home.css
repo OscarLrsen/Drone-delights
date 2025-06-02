@@ -269,3 +269,10 @@ footer {
 .btm-nav-link:hover {
   color: #df9f1f;
 }
+
+
+.btn.btn-add:hover {
+  background-color: #df9f1f;
+  color: white;
+  transform: scale(1.05);
+}

@@ -38,7 +38,6 @@ export default function Menu() {
       </section>
 
       <section className="PopularMealssection">
-        <h2>Popular Meals</h2>
         <div className="meals-grid">
           {filteredMeals.map((meal) => (
             <div className="meal-card" key={meal.id}>

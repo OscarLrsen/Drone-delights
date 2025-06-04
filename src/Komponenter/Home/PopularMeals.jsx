@@ -14,7 +14,7 @@ export default function PopularMeals({ popularMeals }) {
             <img
               src={imageMap[meal.image]}
               alt={meal.name}
-              onError={(e) => (e.target.style.display = "none")}
+              onError={(e) => (e.target.style.display = "none")}  // Döljer bilden om den inte kan laddas
             />
             <h3>{meal.name}</h3>
             <p>{meal.price} SEK</p>

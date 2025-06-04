@@ -38,9 +38,6 @@ export default function Cart() {
           <PaymentOptions />
         </section>
 
-        <div className="cart-button-container">
-          <button className="cart-pay-button">Proceed to Payment</button>
-        </div>
       </main>
 
       <Footer />
